@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redações do Agrinho - Guia do Aluno</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f9f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e5631 0%, #4c9a2a 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background-color: white;
+            border-left: 5px solid #ffb703;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h2 {
+            color: #1e5631;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #ffb703;
+            color: #023047;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 6px rgba(255, 183, 3, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #fb8500;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Sistema de Modal (Janela Pop-up Funcional) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            animation: entradaModal 0.3s ease-out;
+        }
+
+        @keyframes entradaModal {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-content h3 {
+            color: #1e5631;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .modal-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .close-btn {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .close-btn:hover {
+            background-color: #cc2a36;
+        }
+
+        footer {
+            background-color: #11331c;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📝 Concurso de Redação Agrinho</h1>
+        <p>Solte a sua imaginação, pesquise sobre o campo e escreva um texto premiado!</p>
+    </header>
+
+    <main>
+        <div class="intro">
+            <strong>Atenção estudante:</strong> O segredo de uma boa redação para o Agrinho é conectar a sustentabilidade, o trabalho dos produtores rurais e o uso das tecnologias que protegem o nosso planeta.
+        </div>
+
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <h2>Estrutura da Redação</h2>
+                <p>Aprenda a organizar suas ideias em Introdução, Desenvolvimento e Conclusão de forma clara.</p>
+                <button class="btn" onclick="abrirModal('modal-estrutura')">Ver Dicas de Organização</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h2>Critérios de Avaliação</h2>
+                <p>Descubra o que os avaliadores e bancas do concurso buscam na hora de corrigir o seu texto.</p>
+                <button class="btn" onclick="abrirModal('modal-criterios')">Ver O Que É Avaliado</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h2>Ideias de Temas</h2>
+                <p>Precisa de inspiração? Veja os tópicos mais fortes sobre a relação entre o campo e a cidade.</p>
+                <button class="btn" onclick="abrirModal('modal-temas')">Ver Temas Inspiradores</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Estrutura -->
+    <div id="modal-estrutura" class="modal">
+        <div class="modal-content">
+            <h3>✍️ Estrutura Nota 10</h3>
+            <ul>
+                <li><strong>Introdução:</strong> Apresente o tema do campo e sua importância logo no início.</li>
+                <li><strong>Desenvolvimento:</strong> Defenda seus argumentos com dados sobre preservação ou tecnologia.</li>
+                <li><strong>Conclusão:</strong> Proponha uma solução criativa para o futuro da agricultura e da cidade.</li>
+            </ul>
+            <button class="close-btn" onclick="fecharModal('modal-estrutura')">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal Critérios -->
+    <div id="modal-criterios" class="modal">
+        <div class="modal-content">
+            <h3>🔍 O que os juízes avaliam?</h3>
+            <ul>
+                <li><strong>Criatividade e Originalidade:</strong> Textos com histórias autênticas ganham mais pontos.</li>
+                <li><strong>Coerência com o Tema:</strong> Não fuja do assunto principal do Agrinho.</li>
+                <li><strong>Gramática e Ortografia:</strong> Fique atento à pontuação e à escrita correta das palavras.</li>
+            </ul>
+            <button class="close-btn" onclick="fecharModal('modal-criterios')">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal Temas -->
+    <div id="modal-temas" class="modal">
+        <div class="modal-content">
+            <h3>🌱 Temas para se inspirar</h3>
+            <ul>
+                <li>O papel da tecnologia e dos drones no campo sustentável.</li>
+                <li>Como as pequenas propriedades rurais alimentam as grandes cidades.</li>
+                <li>Preservação das nascentes de água e o futuro do nosso ecossistema.</li>
+            </ul>
+            <button class="close-btn" onclick="fecharModal('modal-temas')">Fechar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Página Pedagógica de Apoio ao Concurso Agrinho. Produzido para fins educacionais.</p>
+    </footer>
+
+    <script>
+        // Função para mostrar a janela (Modal) correspondente
+        function abrirModal(idModal) {
+            document.getElementById(idModal).style.display = 'flex';
+        }
+
+        // Função para esconder a janela (Modal) correspondente
+        function fecharModal(idModal) {
+            document.getElementById(idModal).style.display = 'none';
+        }
+
+        // Fecha o modal automaticamente se o usuário clicar fora da caixinha branca
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
