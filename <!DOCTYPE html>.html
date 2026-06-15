@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog The Boys - Seven News</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --primary-color: #00f0ff;
+            --accent-color: #ff0055;
+            --text-color: #ffffff;
+            --card-bg: #1a1a1f;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(10,10,12,1)), url('https://unsplash.com') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+
+        header p {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-post {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .blog-post h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            box-shadow: 0 0 15px var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background-color: #ff3300;
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #050507;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Boys Blog</h1>
+        <p>A única verdade que a Vought não quer que você saiba.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Post 1 -->
+        <article class="blog-post">
+            <h2>Capitão Pátria enlouquece de vez em pronunciamento?</h2>
+            <div class="meta">Postado por: Billy Bruto | 📅 15 de Junho, 2026</div>
+            <p>Em um evento recente na Torre da Vought, nosso querido "herói" número um perdeu a paciência novamente e ameaçou a população presente. Fontes internas afirmam que o surto começou após uma pergunta desconfortável sobre os verdadeiros ingredientes do Composto V. O clima nos bastidores é de puro terror.</p>
+            <p>Testemunhas dizem que seus olhos chegaram a brilhar em vermelho por alguns segundos antes de seus assessores cortarem a transmissão oficial. O público correu em pânico, mas a máquina de relações públicas da corporação já está abafando o caso, alegando que foi apenas um "problema técnico nos telões". Não caia nessa mentira!</p>
+            
+            <div class="btn-group">
+                <button class="btn">Ler Artigo Completo</button>
+                <button class="btn btn-danger">Denunciar a Vought</button>
+                <button class="btn">Ver Vídeos Exclusivos</button>
+            </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-post" style="border-left-color: var(--accent-color);">
+            <h2>A Vanguarda e o Futuro dos Supers</h2>
+            <div class="meta">Postado por: Luz-Estrela | 📅 14 de Junho, 2026</div>
+            <p>A corrupção interna da empresa está atingindo níveis alarmantes. Como ex-membro dos Sete, decidi revelar os podres que acontecem por trás das câmeras, dos contratos milionários e dos falsos resgates armados pela equipe de marketing.</p>
+            <p>Eles criam os próprios vilões para depois venderem a cura e a segurança. Os heróis que vocês idolatram nas telas são, na verdade, astros de cinema mimados que não se importam com vidas humanas. Precisamos nos unir para expor esses criminosos de capa e exigir justiça real para as vítimas colaterais.</p>
+            
+            <div class="btn-group">
+                <button class="btn">Apoiar a Luz-Estrela</button>
+                <button class="btn btn-danger">Vazar Documentos Secretos</button>
+                <button class="btn">Histórico de Vítimas</button>
+            </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-post">
+            <h2>Composto V no Mercado Negro: O Perigo Iminente</h2>
+            <div class="meta">Postado por: Leitinho | 📅 12 de Junho, 2026</div>
+            <p>Descobrimos carregamentos ilegais de Composto V sendo distribuídos em bairros periféricos. A estratégia parece ser criar ameaças locais para forçar o governo a aprovar o uso de Supers nas forças armadas e na segurança pública das cidades.</p>
+            <p>Os efeitos colaterais em adultos comuns são devastadores e, na maioria das vezes, fatais. Estamos rastreando os laboratórios clandestinos financiados por subsidiárias fantasmas da Vought. Se você notar qualquer atividade suspeita ou pessoas com habilidades anormais na sua região, fuja imediatamente e nos avise.</p>
+            
+            <div class="btn-group">
+                <button class="btn">Ver Mapa de Casos</button>
+                <button class="btn btn-danger">Enviar Denúncia Anônima</button>
+                <button class="btn">Como Identificar o Composto V</button>
+            </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="blog-post" style="border-left-color: var(--accent-color);">
+            <h2>O Sumiço do Trem-Bala e as Teorias da Conspiração</h2>
+            <div class="meta">Postado por: Francês | 📅 10 de Junho, 2026</div>
+            <p>O homem mais rápido do mundo não é visto em público há mais de duas semanas. Campanhas publicitárias foram canceladas abruptamente e a assessoria da Vought afirma que ele está em um "retiro espiritual secreto" para focar em seus treinos.</p>
+            <p>Nossos contatos indicam algo muito pior: abuso severo de substâncias e uma possível falha cardíaca encenada. O abuso de substâncias para manter a velocidade máxima está cobrando o seu preço. Fique atento para as próximas atualizações, pois estamos prestes a invadir a clínica médica onde ele supostamente está escondido.</p>
+            
+            <div class="btn-group">
+                <button class="btn">Investigar Clínica</button>
+                <button class="btn">Linha do Tempo do Herói</button>
+                <button class="btn btn-danger">Acessar Prontuário</button>
+            </div>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Blog The Boys. Apoiado pelo Clube dos Rapazes.</p>
+    </footer>
+
+</body>
+</html>
